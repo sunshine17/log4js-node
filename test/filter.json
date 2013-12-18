@@ -1,0 +1,39 @@
+{
+  "appenders": [
+    { 
+      "type": "absLevelFilter",
+      "level": "DEBUG",
+      "appender": {
+        "type": "file",
+        "filename": "./debug.log", 
+        "layout": { 
+          "type": "pattern",
+          "pattern": "%d{yyyy-MM-dd hh:mm:ss.SSS O}`%p`%c`%m"
+        } 
+      }
+    },
+    { 
+      "type": "absLevelFilter",
+      "level": "INFO",
+      "appender": {
+        "type": "file",
+        "filename": "./info.log", 
+        "layout": { 
+          "type": "pattern",
+          "pattern": "%d{yyyy-MM-dd hh:mm:ss.SSS O}`%p`%c`%m"
+        } 
+      }
+    },
+    { 
+      "type": "file",
+      "filename": "./t1.log", 
+      "layout": { 
+        "type": "messagePassThrough" 
+      } 
+    }
+  ],
+  
+  "levels": {
+    "tests":  "DEBUG"
+  }
+}
